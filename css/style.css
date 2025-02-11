@@ -1,0 +1,726 @@
+@charset "utf-8";
+
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color1:#F20505;
+    --main-color2:#F28E13;
+    --sub-color1:#BF6211;
+    --sub-color2:#732A10;
+    --sub-color3:#26041A;
+}
+body{
+    font-family:"lato";
+    font-weight: 900;
+    color: #333333;
+    overflow-x: hidden;
+}
+.anton{
+    font-family: "Anton";
+    font-weight: 400;
+}
+header{
+    height: 100px;
+    padding: 0 40px;
+    z-index: 99999;
+}
+header #logo img{
+    height: 35px;
+    color: #333333;
+    margin: 40px 10px;
+}
+.nav_wrap{
+    height: 30px;
+    position: absolute;
+    right:300px;
+    top: 40px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.nav_wrap:hover{
+    height: 170px;
+    background-color: rgba(242, 5, 5, .8);
+    /* border-radius: 5px; */
+}
+.nav_wrap:hover .gnb > ul > li > a{
+    color: #ffffff;
+    font-weight: 500;
+}
+.nav{
+    display: flex;
+    text-align: center;
+    line-height: 40px;
+}
+.nav_sub > li a{
+    font-weight: 500;
+}
+.gnb{
+    width: 100%;
+    height: 40px;
+}
+.gnb > ul{
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+.gnb > ul > li{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    position: relative;
+    font-family: "noto sans kr";
+}
+.gnb > ul > li > .nav_sub{
+    position: absolute;
+    margin-left: 12px;
+}
+.gnb > ul > li > .nav_sub > li{
+    line-height: 40px;
+}
+.gnb > ul > li > .nav_sub > li > a{
+    color: #ffffff;
+}
+.gnb > ul > li > .nav_sub a:hover{
+    text-decoration: underline;
+}
+.nav_icon img{
+    width: 25px;
+}
+
+/* 아이콘 */
+.icon_wrap{
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 45px;
+    right: 40px;
+}
+.icon_wrap img{
+    width: 20px;
+    cursor: pointer;
+}
+.icon_wrap img:hover{
+    transform: scale(1.3);
+}
+.m_img{
+    width: 100%;
+    position: relative;
+}
+.m_text{
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    color: var(--main-color1);
+    z-index: -9999;
+}
+.m_text p:first-child{
+    font-size: 50px;
+}
+.m_text p:last-child{
+    font-size: 450px;
+}
+.m_img .main_img1{
+    height: 850px;
+    position: absolute;
+    top: 80px;
+    left: 800px;
+}
+.m_img .main_img2{
+    position: absolute;
+    height: 500px;
+    left: 350px;
+    top: 130px;
+}
+.m_img .main_img3{
+    position: absolute;
+    width: 400px;
+    top: -100px;
+    left: 400px;
+    filter:brightness(.9);
+    z-index: -1;
+}
+/* TOP 버튼 */
+#top_btn{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+/* main 첫번째 section cocacola */
+#cocacola{
+    width: 100%;
+    height: 800px;
+    margin-top: 1100px;
+    text-align: center;
+    position: relative;
+}
+#cocacola p{
+    font-size: 80px;
+    line-height: 180px;
+}
+#cocacola img{
+    position: absolute;
+}
+.blob1{
+    top: 30px;
+    right: 620px;
+}
+.blob2{
+    top:200px;
+    right: 800px;
+}
+.blob3{
+    top: 380px;
+    left: 640px;
+}
+.light1{
+    top: 10px;
+    left: 670px;
+}
+.light2{
+    top: 300px;
+    right: 250px;
+}
+.light3{
+    bottom: 250px;
+    left: 350px;
+}
+.light4{
+    top:200px;
+    right: 500px;
+}
+.light5{
+    bottom: 200px;
+    right: 400px;
+    width: 30px;
+}
+.light6{
+    bottom: 500px;
+    left: 300px;
+    width: 30px;
+}
+/* rotate 애니메이션 */
+.rotate{
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.rotate2{
+    animation: rotation2 2s infinite linear;
+}
+@keyframes rotation2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+/* main 두번째 section business */
+#business{
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#business h2{
+    font-family: "anton";
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--sub-color3);
+    margin-left: 110px;
+    margin-bottom: 50px;
+}
+.b_box{
+    width: 500px;
+    height: 300px;
+    transition: .3s;
+}
+.b_box p:first-child{
+    font-size: 16px;
+    font-weight: 100;
+    margin: 25px 40px;
+}
+.b_box p:nth-child(2){
+    font-size: 60px;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+.b_box p{
+    color: #ffffff;
+}
+.b_box:hover{
+    transform: scale(1.2);
+}
+.b_box1{
+    background-color: rgba(242, 5, 5, .8);
+    position: absolute;
+    left: 110px;
+    overflow: hidden;
+}
+.business1{
+    position: absolute;
+    width: 300px;
+    left: -110px;
+    top: 200px;
+}
+.business2{
+    position: absolute;
+    width: 300px;
+    left: 30px;
+    top: 180px;
+}
+.business3{
+    position: absolute;
+    width: 300px;
+    left: 160px;
+    top: 100px;
+}
+.business4{
+    position: absolute;
+    width: 100px;
+    left: 400px;
+    top: 80px;
+}
+.b_box2{
+    background-image: url('../images/global500.jpg');
+    background-size: contain;
+    position: absolute;
+    top: 150px;
+    left: 660px;
+}
+.b_box3{
+    background-image: url('../images/everyday500.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 450px;
+    left: 110px;
+}
+.b_box4{
+    background-color: #26041A;
+    position: absolute;
+    top: 500px;
+    left: 660px;
+}
+.b_box4 img{
+    width: 200px;
+    margin-left: 250px;
+    margin-top: 90px;
+}
+
+/* main 세번째 section product */
+#product{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    margin-top: 100px;
+}
+#product h2{
+    font-family: "anton";
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+    margin-left: 311px;
+    position: absolute;
+    top: 63px;
+    z-index: 10000;
+}
+.v_wrap{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.v_wrap video{
+    width: 100%;
+    position: absolute;
+}
+.v_bg{
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(115, 2, 2,.8);
+    position: absolute;
+}
+
+/* 슬라이드 영역*/
+html,
+body{
+    position: relative;
+    height: 100%;
+    }
+
+body{
+    font-family: "lato";
+    }
+
+.swiper{
+    width: 1280px;
+    height: 800px;
+    position: absolute;
+    top: -900px;
+    }
+
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.swiper-slide h3{
+        font-size: 64px;
+        position: absolute;
+        margin: 80px 100px;
+    }
+.swiper-slide p{
+        position: absolute;
+        text-align: left;
+        margin: 200px 100px;
+        line-height: 40px;
+    }
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+.swiper .swiper-button-prev{
+    color: var(--main-color1);
+}
+.swiper .swiper-button-next{
+    color: var(--main-color1);
+}
+
+/* 상품 소개, 주문 버튼 영역 */
+.p_btn_wrap{
+    position: relative;
+}
+.p_btn{ 
+    width: 230px;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--main-color1);
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+.b_btn{
+    width: 230px;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 1px solid var(--main-color1);
+    background-color: #ffffff;
+    font-weight: bold;
+    color: var(--main-color1);
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.p_btn:hover{
+    background-color: #F20505;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(95, 95, 95, 0.8);
+}
+.b_btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(95, 95, 95, 0.8);
+}
+.p_btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+.p_btn:focus {
+    outline: 3px solid rgba(242,5,5,0.5);
+}
+.p_btn_wrap button:first-child{
+    top: 650px;
+    left: 100px;
+}
+.p_btn_wrap button:nth-child(2){
+    top: 650px;
+    left: 350px;
+}
+
+/* main 네번째 section brand story */
+#b_story{
+    margin: 0 auto;
+    width: 1280px;
+    overflow: hidden;
+/*     height: 100%; */
+}
+#b_story h2{
+    font-family: "anton";
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--sub-color3);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* 슬라이드2 */
+.swiper2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.con_btn_rel{
+    position: relative;
+}
+.swiper-pagination2{
+    text-align: center;
+/*     line-height: 100px; */
+    position: absolute;
+    z-index: 17000;
+    color: #ffffff;
+}
+
+/* 슬라이드2 txt */
+.txt_up{
+    position: relative;
+    overflow: hidden;
+}
+.slide2_txt_wrap{
+    width: 406px;
+    height: 100px;
+    display: flex;
+    background-color: rgba(38, 4, 26, .8);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:-300px;
+/*     display: none; */
+    transition: 0.2s ease-out;
+}
+.slide2_txt{
+    font-family: "noto sans kr";
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+    margin-top: 30px;
+}
+.txt_up:hover .slide2_txt_wrap{ 
+    transform: translateY(-300px);
+    display: block;
+} 
+.drag{
+    margin-top: 20px;
+    display: flex;
+}
+.drag img{
+    width: 30px;
+}
+.drag span{
+    display: block;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+
+/* main 다섯번째 section sustainability*/
+#sustainability{
+    width: 100%;
+    height: 900px;
+    margin-top: 250px;
+    padding-bottom: 100px;
+    background-image: url(../images/nature.jpg);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+.sus_con_wrap{
+    width: 100%;
+    position: absolute;
+    top: 350px;
+    left: 960px;
+    transform: translate(-50%);
+    line-height: 40px;
+}
+#sustainability h2{
+    font-family: "anton";
+    font-weight: 400;
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+}
+#sustainability p{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 500;
+}
+.sus_btn_wrap{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.sus_btn_wrap .sus_btn{
+    transition: all 0.3s ease;
+}
+.sus_btn:hover{
+    transform: translateY(-3px);
+}
+/* ripple 효과 */
+.ripple-button {
+    position: relative;
+    overflow: hidden;
+    transition: background 400ms;
+    color: #fff;
+    background-color: #1d3a7a;
+    padding: 20px 30px;
+    border-radius: 50px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "lato";
+    font-weight: 700;
+}
+
+.ripple-button > .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 1200ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple{
+    to {
+    transform: scale(4);
+    opacity: 0;
+    }
+}
+
+/* footer 영역 */
+.footer_wrap{
+    width: 100%;
+    height: 210px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 200;
+}
+.f_logo img{
+    width: 150px;
+    margin-bottom: 50px;
+}
+.t_use{
+    padding-bottom: 50px;
+}
+.t_use a{
+    color: #ffffff;
+}
+.t_use a:hover{
+    text-decoration:underline;
+}
+.f_txt{
+    text-align: center;
+    position: relative;
+}
+.f_txt ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transform: translateX(250px);
+    margin-bottom: 30px;
+}
+.f_txt p{
+    line-height: 30px;
+    font-size: 15px;
+}
+.f_txt > ul li:nth-child(4){
+    font-weight: bold;
+}
+.sns{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.sns a{
+    transition: 0.3s;
+}
+.sns a:hover{
+    transform: scale(1.2);
+}
+address{
+    margin-top: 70px;
+    margin-left: -260px;
+}
+address p{
+    line-height: 30px;
+}
+/* 인터랙션 효과 */
+.moving_effect:hover{
+    animation: moving 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+/*     backface-visibility: hidden;
+    perspective: 1000px; */
+}
+.d_moving:hover{
+    animation: moving 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes moving {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
